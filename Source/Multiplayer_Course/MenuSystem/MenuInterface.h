@@ -13,14 +13,15 @@ class UMenuInterface : public UInterface
 	GENERATED_BODY()
 };
 
-/**
- * 
- */
 class MULTIPLAYER_COURSE_API IMenuInterface
 {
 	GENERATED_BODY()
 
 public:
 	virtual void Host() = 0;
-	virtual void Join() = 0;
+	virtual void Join(uint32 Index) = 0;
+	virtual void LoadMainMenu() = 0;
+	virtual void LoadInGameMenu() = 0;
+	virtual void GoToMainMenu() = 0;
+	virtual void RefreshServerList() = 0;
 };
